@@ -1,0 +1,130 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Company Organization',
+      theme: ThemeData(primarySwatch: Colors.teal),
+      home: MyPage(),
+    );
+  }
+}
+
+class MyPage extends StatelessWidget {
+  const MyPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(' 회사조직도'),
+        centerTitle: true,
+      ),
+      body: CompanyOrganization(),
+      backgroundColor: Colors.lightGreen[100],
+    );
+  }
+}
+
+class CompanyOrganization extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            child: Text('FEG'),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+              Colors.blue,
+            )),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Family Express Global',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  backgroundColor: Colors.blue,
+                  duration: Duration(seconds: 3),
+                ),
+              );
+            },
+          ),
+          Padding(padding: EdgeInsets.all(20)),
+          ElevatedButton(
+            child: Text('GLS'),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+              Colors.greenAccent[400],
+            )),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Global Logistics Square',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  backgroundColor: Colors.greenAccent[400],
+                  duration: Duration(seconds: 3),
+                ),
+              );
+            },
+          ),
+          Padding(padding: EdgeInsets.all(20)),
+          ElevatedButton(
+            child: Text('FCB'),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+              Colors.lightBlue,
+            )),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Family Customs Broker',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  backgroundColor: Colors.lightBlue,
+                  duration: Duration(seconds: 3),
+                ),
+              );
+            },
+          ),
+          Padding(padding: EdgeInsets.all(20)),
+          ElevatedButton(
+            child: Text('CFL'),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(
+              Colors.orange[800],
+            )),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Creative Flow Logistics',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  backgroundColor: Colors.orange[800],
+                  duration: Duration(seconds: 3),
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
