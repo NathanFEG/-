@@ -24,11 +24,11 @@ class MyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(' 회사조직도'),
+        title: Text(' 우리 회사를 소개합니다'),
         centerTitle: true,
       ),
       body: CompanyOrganization(),
-      backgroundColor: Colors.lightGreen[100],
+      backgroundColor: Colors.lightGreen[50],
     );
   }
 }
@@ -60,7 +60,7 @@ class CompanyOrganization extends StatelessWidget {
               );
             },
           ),
-          Padding(padding: EdgeInsets.all(20)),
+          Padding(padding: EdgeInsets.all(10)),
           ElevatedButton(
             child: Text('GLS'),
             style: ButtonStyle(
@@ -81,12 +81,12 @@ class CompanyOrganization extends StatelessWidget {
               );
             },
           ),
-          Padding(padding: EdgeInsets.all(20)),
+          Padding(padding: EdgeInsets.all(10)),
           ElevatedButton(
             child: Text('FCB'),
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
-              Colors.lightBlue,
+              Colors.grey[700],
             )),
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -102,7 +102,7 @@ class CompanyOrganization extends StatelessWidget {
               );
             },
           ),
-          Padding(padding: EdgeInsets.all(20)),
+          Padding(padding: EdgeInsets.all(10)),
           ElevatedButton(
             child: Text('CFL'),
             style: ButtonStyle(
