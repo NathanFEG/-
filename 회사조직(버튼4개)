@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -47,6 +49,8 @@ class CompanyOrganization extends StatelessWidget {
               Colors.blue,
             )),
             onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => FEG()));
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
@@ -68,6 +72,8 @@ class CompanyOrganization extends StatelessWidget {
               Colors.greenAccent[400],
             )),
             onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => GLS()));
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
@@ -75,7 +81,7 @@ class CompanyOrganization extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
                   ),
-                  backgroundColor: Colors.greenAccent[400],
+                  backgroundColor: Colors.green,
                   duration: Duration(seconds: 3),
                 ),
               );
@@ -89,6 +95,8 @@ class CompanyOrganization extends StatelessWidget {
               Colors.grey[700],
             )),
             onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => FCB()));
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
@@ -110,6 +118,8 @@ class CompanyOrganization extends StatelessWidget {
               Colors.orange[800],
             )),
             onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => CFL()));
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
@@ -124,6 +134,170 @@ class CompanyOrganization extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CFL extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('CFL (Creavtive Flow Logistcs)'),
+        backgroundColor: Colors.orange,
+      ),
+      body: Padding(
+        padding: EdgeInsets.zero,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: ClipOval(
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset('assets/CFL 로고최종-01.png',
+                      width: 200, height: 200, fit: BoxFit.contain),
+                ),
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                child: Text('메인페이지 가기'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.orange),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class FEG extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('FEG (Family Express Global)'),
+        backgroundColor: Colors.blue,
+      ),
+      body: Padding(
+        padding: EdgeInsets.zero,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: ClipOval(
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset('assets/FEG 로고최종-01.png',
+                      width: 200, height: 200, fit: BoxFit.contain),
+                ),
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                child: Text('메인페이지 가기'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.blue),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+class GLS extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('GLS (Global Logistics Square)'),
+        backgroundColor: Colors.green,
+      ),
+      body: Padding(
+        padding: EdgeInsets.zero,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: ClipOval(
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset('assets/GLS 로고최종-01.png',
+                      width: 200, height: 200, fit: BoxFit.contain),
+                ),
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                child: Text('메인페이지 가기'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class FCB extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('FCB (Family Customs Broker)'),
+        backgroundColor: Colors.blueAccent,
+      ),
+      body: Padding(
+        padding: EdgeInsets.zero,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: ClipOval(
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset('assets/FCB 로고최종-01.png',
+                      width: 200, height: 200, fit: BoxFit.contain),
+                ),
+              ),
+            ),
+            Center(
+              child: ElevatedButton(
+                child: Text('메인페이지 가기'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
